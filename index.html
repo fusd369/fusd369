@@ -39,16 +39,11 @@
       opacity: 1;
     }
 
-    /* PERUBAHAN CSS: Mengatur ukuran ikon dan gambar secara terpisah */
-    .social-icons-header .fa-telegram {
-        font-size: 1.6rem; /* Ukuran ikon telegram */
-    }
-
+    /* PERUBAHAN CSS: Menggunakan satu kelas untuk kedua gambar ikon sosial */
     .social-icons-header .social-icon-img {
-        height: 1.3rem; /* Ukuran gambar X */
+        height: 22px; /* Menyamakan ukuran kedua ikon */
     }
-    /* === AKHIR PERUBAHAN CSS === */
-
+    
     .logo {
       width: 100px;
       margin: 20px auto;
@@ -147,6 +142,9 @@
         top: 1.5rem;
         right: 1.5rem;
       }
+      .social-icons-header .social-icon-img {
+        height: 20px; /* Ukuran ikon di mobile */
+      }
     }
   </style>
 </head>
@@ -154,12 +152,13 @@
 
   <div class="social-icons-header">
     <a href="https://x.com/fusd_369" target="_blank" rel="noopener noreferrer" title="Follow us on X">
-      <img src="./x_social.svg" class="social-icon-img" alt="X Logo"/>
+      <img src="./x.png" class="social-icon-img" alt="X Logo"/>
     </a>
     <a href="https://t.me/fiatdollar_official" target="_blank" rel="noopener noreferrer" title="Join our Telegram">
-      <i class="fa-brands fa-telegram"></i>
+      <img src="./telegram.png" class="social-icon-img" alt="Telegram Logo"/>
     </a>
   </div>
+
   <img src="./logo.png" alt="FUSD Logo" class="logo" />
   <div class="token-name">$FUSD</div>
   <div class="tagline">They print USD. We burn $FUSD</div>
