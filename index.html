@@ -14,7 +14,30 @@
       color: #fff;
       text-align: center;
       padding: 2rem;
+      position: relative; /* Diperlukan untuk penempatan ikon sosial */
     }
+
+    /* === BAGIAN BARU UNTUK IKON SOSIAL DI ATAS === */
+    .social-icons-header {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: flex;
+      gap: 18px; /* Jarak antar ikon */
+    }
+
+    .social-icons-header a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem; /* Ukuran ikon */
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-icons-header a:hover {
+      opacity: 1;
+    }
+    /* === AKHIR BAGIAN BARU === */
 
     .logo {
       width: 100px;
@@ -108,10 +131,27 @@
       font-size: 0.8rem;
       color: #777;
     }
+
+    /* Penyesuaian untuk layar kecil */
+    @media (max-width: 600px) {
+      .social-icons-header {
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.3rem; /* Sedikit lebih kecil di mobile */
+      }
+    }
   </style>
 </head>
 <body>
 
+  <div class="social-icons-header">
+    <a href="https://x.com/fusd_369" target="_blank" rel="noopener noreferrer" title="Follow us on X">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://t.me/fiatdollar_official" target="_blank" rel="noopener noreferrer" title="Join our Telegram">
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+  </div>
   <img src="./logo.png" alt="FUSD Logo" class="logo" />
   <div class="token-name">$FUSD</div>
   <div class="tagline">They print USD. We burn $FUSD</div>
@@ -153,7 +193,7 @@
     <a href="https://dexscreener.com/solana/EtbEwAMBBvi5ryJy25kYQ7GDn6aYESqMXAbfneKf6XWH" target="_blank" rel="noopener noreferrer">
       <img src="./dexs.png" alt="Dex Screener" class="partner-logo">
     </a>
-    <a href="https://www.dxtools.io/app/en/solana" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.dextools.io/app/en/solana" target="_blank" rel="noopener noreferrer">
       <img src="./dex.png" alt="DEXTools" class="partner-logo">
     </a>
     <a href="https://coinmarketcap.com/" target="_blank" rel="noopener noreferrer">
