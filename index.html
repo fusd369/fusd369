@@ -41,6 +41,7 @@
       gap: 10px;
       font-size: 0.9rem;
       margin-bottom: 20px;
+      word-break: break-all; /* Agar alamat tidak keluar dari box di layar kecil */
     }
 
     .copy-icon {
@@ -98,7 +99,7 @@
   </div>
 
   <br />
-  <a href="https://dexscreener.com/solana/EtbEwAMBBvi5ryJy25kYQ7GDn6aYESqMXAbfneKf6XWH" target="_blank">
+  <a href="https://raydium.io/swap/?inputMint=sol&outputMint=EtbEwAMBBvi5ryJy25kYQ7GDn6aYESqMXAbfneKf6XWH" target="_blank">
     <button class="buy-btn">BUY NOW</button>
   </a>
 
@@ -124,8 +125,11 @@
   <script>
     function copyContract() {
       const contract = "EtbEwAMBBvi5ryJy25kYQ7GDn6aYESqMXAbfneKf6XWH";
-      navigator.clipboard.writeText(contract);
-      alert("Contract address copied to clipboard!");
+      navigator.clipboard.writeText(contract).then(() => {
+        alert("Contract address copied to clipboard!");
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
     }
   </script>
 </body>
