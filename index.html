@@ -14,30 +14,40 @@
       color: #fff;
       text-align: center;
       padding: 2rem;
-      position: relative; /* Diperlukan untuk penempatan ikon sosial */
+      position: relative; 
     }
 
-    /* === BAGIAN BARU UNTUK IKON SOSIAL DI ATAS === */
     .social-icons-header {
       position: absolute;
       top: 2rem;
       right: 2rem;
       display: flex;
-      gap: 18px; /* Jarak antar ikon */
+      gap: 20px; 
+      align-items: center;
     }
 
     .social-icons-header a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.5rem; /* Ukuran ikon */
       opacity: 0.7;
       transition: opacity 0.3s ease;
+      display: inline-flex;
+      align-items: center;
     }
-
+    
     .social-icons-header a:hover {
       opacity: 1;
     }
-    /* === AKHIR BAGIAN BARU === */
+
+    /* PERUBAHAN CSS: Mengatur ukuran ikon dan gambar secara terpisah */
+    .social-icons-header .fa-telegram {
+        font-size: 1.6rem; /* Ukuran ikon telegram */
+    }
+
+    .social-icons-header .social-icon-img {
+        height: 1.3rem; /* Ukuran gambar X */
+    }
+    /* === AKHIR PERUBAHAN CSS === */
 
     .logo {
       width: 100px;
@@ -132,12 +142,10 @@
       color: #777;
     }
 
-    /* Penyesuaian untuk layar kecil */
     @media (max-width: 600px) {
       .social-icons-header {
         top: 1.5rem;
         right: 1.5rem;
-        font-size: 1.3rem; /* Sedikit lebih kecil di mobile */
       }
     }
   </style>
@@ -146,7 +154,7 @@
 
   <div class="social-icons-header">
     <a href="https://x.com/fusd_369" target="_blank" rel="noopener noreferrer" title="Follow us on X">
-      <i class="fa-brands fa-x-twitter"></i>
+      <img src="./x_social.svg" class="social-icon-img" alt="X Logo"/>
     </a>
     <a href="https://t.me/fiatdollar_official" target="_blank" rel="noopener noreferrer" title="Join our Telegram">
       <i class="fa-brands fa-telegram"></i>
